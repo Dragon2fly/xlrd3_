@@ -119,6 +119,7 @@ def open_workbook(filename=None, logfile=sys.stdout, verbosity=0, use_mmap=True,
                 on_demand=on_demand,
                 ragged_rows=ragged_rows,
             )
+            zf.close()
             return bk
         if 'xl/workbook.bin' in component_names:
             raise XLRDError('Excel 2007 xlsb file; not supported')
